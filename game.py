@@ -16,7 +16,6 @@ def Process():
                 display.append("C")
         count += 1
 
-        print(display)
         print("B",display.count("B"), "\nC",display.count("C"))
         if display == ['B', 'B', 'B', 'B']:
             end = True
