@@ -1,7 +1,6 @@
 def User_Input():
- #사용자 입력
- print("사용자 입력")
-
+ a, b, c, d = map(int, input("사용자 입력(ex. 1,2,3,4):").split(',')) 
+ return a, b, c, d
 
 def Random_Input():
  print("랜덤")
