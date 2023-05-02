@@ -7,6 +7,7 @@ def User_Input():
 
 def Random_Input():
  random_list = random.sample(range(0, 10),4)
+ return random_list
 # random_list
 # print("랜덤")
 
