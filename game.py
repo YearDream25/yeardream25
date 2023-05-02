@@ -1,27 +1,42 @@
+import random
+
 def User_Input():
- a, b, c, d = map(int, input("사용자 입력(ex. 1,2,3,4):").split(',')) 
- return a, b, c, d
+  while True:
+   a, b, c, d = map(int, input("사용자 입력(ex. 1,2,3,4):").split(','))
+   if len(set([a,b,c,d])) == 4:
+     break
+   print("중복된 값이 있습니다. 다시 입력해주세요") 
+  return [a, b, c, d]
 
 def Random_Input():
- print("랜덤")
+ random_list = random.sample(range(0, 10),4)
+ return random_list
+
+# print("랜덤")
 
 def Process():
- print("처리")
- import random
+num1 = (4, 3, 9 ,8)
+num2 = (4, 3, 9, 8)
 
- random_list = [1, 2, 4, 3]
- user_num = [0, 1, 7 , 3]
+result = 0
+for i in range(4):
+    if num1[i] == num2[i]:
+        result += 1
+    else:
+        continue
+if result == 4:
+    print("정답!")
+else:
+    print("Bulls : ", result)
 
- bull_num = 0
- cow_num = 0
- for i in range(0, 4):
-     if random_list.count(user_num[i]):
-         cow_num += 1
+result2 = 0
+for i in range(4):
+    if num2[i] in num1:
+        result2 += 1
+    else:
+        continue
+print("Cows : ", result2-result)
 
-     if random_list[i] == user_num[i]:
-         bull_num += 1
- print('cow_num = ',cow_num)
- print('bull_num = ',bull_num)
 
 if __name__ == "__main__":
  User_Input()
