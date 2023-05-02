@@ -38,7 +38,6 @@ for i in range(4):
 print("Cows : ", result2-result)
 
 
-
 if __name__ == "__main__":
  User_Input()
  Random_Input()
